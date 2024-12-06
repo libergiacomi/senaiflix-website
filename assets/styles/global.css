@@ -20,9 +20,9 @@ body {
     background-color: black;
 }
 
-header {
-    position: absolute; /* Posiciona o header de forma absoluta, sobrepondo outros elementos */
-    width: 100%; /* Define a largura do header como 100% da tela */
+.cabecalho {
+    position: absolute; /* Posiciona o .cabecalho de forma absoluta, sobrepondo outros elementos */
+    width: 100%; /* Define a largura do .cabecalho como 100% da tela */
     background: rgb(0,0,0); /* Define a cor de fundo como preta */
     background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* Gradiente linear para navegadores antigos (Mozilla) */
     background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* Gradiente linear para navegadores antigos (Webkit) */
@@ -32,17 +32,17 @@ header {
     padding-left: 120px; 
     padding-right: 120px; 
     display: flex; /* Define o layout como flexbox */
-    justify-content: space-between; /* Distribui o conteúdo de forma que haja espaço entre os itens no header */
+    justify-content: space-between; /* Distribui o conteúdo de forma que haja espaço entre os itens no .cabecalho */
     z-index: 1;
 }
 
-header .logo {
-    color: white; /* Define a cor do texto dentro de <span> no header como branca */
+.cabecalho .logo {
+    color: white; /* Define a cor do texto dentro de <span> no .cabecalho como branca */
     text-decoration: none;
 }
 
-header nav a {
-    color: white; /* Define a cor dos links dentro do <nav> no header como branca */
+.cabecalho nav a {
+    color: white; /* Define a cor dos links dentro do <nav> no .cabecalho como branca */
     text-decoration: none; /* Remove o sublinhado dos links */
     margin-left: 10px; /* Adiciona uma margem de 10px à esquerda de cada link */
 }
@@ -371,5 +371,32 @@ main {
         width: 40%;
         height: 230px;
         margin-bottom: 10px;
+    }
+
+    /* Cabecalho mobile */
+    .cabecalho {
+        display: none;
+    }
+
+    #cabecalho-mobile {
+        position:fixed ;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        z-index: 2;
+    }
+
+    #cabecalho-mobile nav {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20vh;
+        padding-left: 15px;
+    }
+
+    #cabecalho-mobile nav a {
+        color: white;
+        font-size: 4em;
+        margin-bottom: 40px;
     }
 }
